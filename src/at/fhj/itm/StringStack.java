@@ -1,10 +1,20 @@
 package at.fhj.itm;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author mrederly
+ * @version 1.0
+ *
+ */
 public class StringStack implements Stack
 {
+	/**
+	 * store the Strings
+	 */
 	List<String> stack = new ArrayList<String>();
 
 	public boolean isEmpty()
