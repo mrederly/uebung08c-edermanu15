@@ -1,31 +1,27 @@
 package at.fhj.itm;
 
-/**
- * Stack Implementation of <code>Stack</code> Interface.
- * supports String Values and can be initialized with a maximum number
- * of items.
- *  
- * @see Stack
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringStack implements Stack
 {
+	List<String> stack = new ArrayList<String>();
 
-	@Override
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isEmpty()
+	{
+		return stack.isEmpty();
 	}
 
-	@Override
-	public void push(String item) {
-		// TODO Auto-generated method stub
-		
+	public void push(String item)
+	{
+		stack.add(item);
 	}
 
-	@Override
-	public String pop() {
-		// TODO Auto-generated method stub
-		return null;
+	public String pop()
+	{
+		String elem = stack.get(stack.size()-1);
+		stack.remove(stack.size()-1);
+		return elem;
 	}
 
 }
